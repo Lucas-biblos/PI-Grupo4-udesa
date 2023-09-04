@@ -1,0 +1,34 @@
+.Logo {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    background-color: black;
+}
+.Fotito {
+    border-radius: 200px;
+    height: 100px;
+}
+body {
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+   color: orange
+}
+.Navbar {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+    margin: 50px 0px;
+    
+}
+.ulnav  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    
+}
