@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     justify-content: space-around;
-    height: 200px;
+    height: 125px;
     background-color: black;
 }
 .Fotito {
@@ -11,7 +11,7 @@
 }
 body {
     margin: 0px;
-    background-color: rgb(19, 19, 97);
+    background-color: rgb(35, 35, 79);
     font-family: 'Open Sans', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif;
@@ -26,7 +26,7 @@ a {
     display: flex;
     flex-direction: row;
     font-size: 35px;
-    margin: 50px 0px;
+    justify-content: center;
     
 }
 .ulnav  {
@@ -52,6 +52,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 10px;
 }
 .pfooter {
    font-size: 15px;
@@ -66,11 +67,12 @@ li {
     font-size: 30px;
  }
  .Fotos-seriepopular {
-    height: 300px;
+    height: 400px;
+    width: 286px;
  }
-
  .h2deindex {
     color:  orange;
+    width: 286px;
  }
  .h3deindex {
     color:  orange;
@@ -79,4 +81,8 @@ li {
 ul { display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0px;
+}
+.sectionmainindex {
+    margin: 0px 10px;
 }
