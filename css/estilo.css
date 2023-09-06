@@ -35,8 +35,9 @@ a {
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
-    
+
 }
+
 footer {
     background-color: black;
     color: white;
@@ -54,4 +55,28 @@ footer {
 }
 .pfooter {
    font-size: 15px;
+}
+li {
+    list-style-type: none;
+    text-align: center;
+ }
+/* Aca empieza el index */
+.h1deindex {
+    color:  orange;
+    font-size: 30px;
+ }
+ .Fotos-seriepopular {
+    height: 300px;
+ }
+
+ .h2deindex {
+    color:  orange;
+ }
+ .h3deindex {
+    color:  orange;
+ }
+
+ul { display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
