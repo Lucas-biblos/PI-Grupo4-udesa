@@ -86,3 +86,29 @@ ul { display: flex;
 .sectionmainindex {
     margin: 0px 10px;
 }
+/* aca empieza detalles peliculas */
+.maindepeliculas {
+    display: flex;
+    flex-direction: row;
+  }
+  
+    
+.Sectionimgpeliculas {
+   margin: 20px 0px;
+  }
+  .Sectionpalabraspeliculas {
+    margin: 0px 20px;
+  }
+    
+.h1depeliculas {
+   color: white;
+   font-size: 20px;
+ }
+ .btn{
+    display: flex;
+    justify-content: flex-end;
+ }
+ .botonpeliculas{
+    cursor: pointer;
+  }
+ 
