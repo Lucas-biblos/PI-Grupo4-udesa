@@ -61,7 +61,13 @@ li {
     list-style-type: none;
     text-align: center;
  }
+
+.formulario {
+    color: white;
+ }
+
 /* Aca empieza el index */
+
 .h1deindex {
     color:  orange;
     font-size: 30px;
@@ -86,7 +92,9 @@ ul { display: flex;
 .sectionmainindex {
     margin: 0px 10px;
 }
+
 /* aca empieza detalles peliculas */
+
 .maindepeliculas {
     display: flex;
     flex-direction: row;
@@ -94,7 +102,7 @@ ul { display: flex;
   
     
 .Sectionimgpeliculas {
-   margin: 20px 0px;
+   margin: 20px 10px;
   }
   .Sectionpalabraspeliculas {
     margin: 0px 20px;
