@@ -104,6 +104,10 @@ ul { display: flex;
 .Sectionimgpeliculas {
    margin: 20px 10px;
   }
+.imgpeliculas {
+    margin-left: 10px;
+    height: 781px;
+}
   .Sectionpalabraspeliculas {
     margin: 0px 20px;
   }
@@ -119,4 +123,10 @@ ul { display: flex;
  .botonpeliculas{
     cursor: pointer;
   }
- 
+
+/* series usa el mismo css que peliculas excepto este */
+ .imgseries {
+    margin-left: 10px;
+    height: 735px;
+}
+
