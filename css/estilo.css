@@ -132,10 +132,10 @@ ul { display: flex;
 /*Aca va todo lo relacionado con genero */
 .boxgeneros{
     background-color: black;
-    color: white;
+    color: rgb(235, 120, 12);
     padding: 60px ;
-    border-radius: 100px;
-    margin: 20px;
+    border-radius: 50px;
+    margin: 40px;
     font-size: 25px;
 }
 .Sectiondelgenero
@@ -148,12 +148,15 @@ ul { display: flex;
  .h1degenero
 {
     text-align: center;
-    color: orange;
+    color: rgb(235, 120, 12);
  }
  .Articlegenero
 {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
  }
  /* Reutilizamos lo de favoritos excepto esto*/
 .h1defavoritos{
