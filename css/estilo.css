@@ -130,3 +130,8 @@ ul { display: flex;
     height: 735px;
 }
 
+.Generos{
+    background-color: black;
+    color: orange;
+    padding: 30px 30px;
+}
