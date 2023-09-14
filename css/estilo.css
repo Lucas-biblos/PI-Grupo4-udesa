@@ -205,7 +205,9 @@ ul { display: flex;
         list-style-type: none;
     }
     
-    
+   .h4buscar{ 
+    margin: 0px;
+   }
     footer {
         background-color: black;
         color: white;
@@ -233,7 +235,7 @@ ul { display: flex;
         color: white;
      }
     
-    /* Aca empieza el index (tambien vamos a utilizar esto para detalle-genero y favoritos) */
+    /* Aca empieza el index (tambien vamos a utilizar esto para detalle-genero, busqueda y favoritos) */
     
     .h1deindex {
         color:  orange;
@@ -245,14 +247,14 @@ ul { display: flex;
      }
      .h2deindex {
         color:  orange;
-        width: 286px;
+        width: 376px;
      }
      .h3deindex {
         color:  orange;
      }
     
     ul { display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         padding: 0px;
     }
@@ -264,7 +266,7 @@ ul { display: flex;
     
     .maindepeliculas {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
       }
       
         
@@ -272,8 +274,7 @@ ul { display: flex;
        margin: 20px 10px;
       }
     .imgpeliculas {
-        margin-left: 10px;
-        height: 781px;
+        height: 565px;
     }
       .Sectionpalabraspeliculas {
         margin: 0px 20px;
@@ -290,7 +291,13 @@ ul { display: flex;
      .botonpeliculas{
         cursor: pointer;
       }
-    
+      .celulargenero {
+        font-size: 20px;
+      }
+      .iframecelular {
+        height: 400px;
+        width: 384px;
+    }
     /* series usa el mismo css que peliculas excepto este */
      .imgseries {
         margin-left: 10px;
@@ -331,5 +338,8 @@ ul { display: flex;
        text-align: center;
        font-size: 40px;
     }
-                           
+         /*esto le sumamos a busqueda pero solo version celular para que se vea mejor*/
+    .busquedacelular  {  
+        font-size: 26px;
+    }              
   }
