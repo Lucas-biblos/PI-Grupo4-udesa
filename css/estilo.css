@@ -300,8 +300,8 @@ ul { display: flex;
     }
     /* series usa el mismo css que peliculas excepto este */
      .imgseries {
-        margin-left: 10px;
-        height: 735px;
+        margin: 10px 10px;
+        height: 481px;
     }
     /*Aca va todo lo relacionado con genero */
     .boxgeneros{
