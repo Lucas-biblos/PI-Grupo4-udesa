@@ -165,7 +165,7 @@ ul { display: flex;
    font-size: 40px;
 }
 /* A partir de aca hacemos el responsive para el celular*/
-@media(max-width:420px) {
+@media(max-width:425px) {
     .Logo {
         display: flex;
         flex-direction: row;
