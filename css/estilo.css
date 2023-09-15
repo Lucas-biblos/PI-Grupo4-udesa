@@ -74,7 +74,7 @@ li {
  }
  .Fotos-seriepopular {
     height: 400px;
-    width: 286px;
+    width: 275px;
  }
  .h2deindex {
     color:  orange;
@@ -131,12 +131,18 @@ ul { display: flex;
 }
 /*Aca va todo lo relacionado con genero */
 .boxgeneros{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     background-color: black;
     color: rgb(235, 120, 12);
-    padding: 60px ;
+    padding: 60px;
     border-radius: 50px;
     margin: 40px;
     font-size: 25px;
+    height: 30px;
+    width: 110px;
 }
 .Sectiondelgenero
 {
@@ -240,6 +246,7 @@ ul { display: flex;
     .h1deindex {
         color:  orange;
         font-size: 30px;
+        text-align: center;
      }
      .Fotos-seriepopular {
         height: 400px;
@@ -305,18 +312,24 @@ ul { display: flex;
     }
     /*Aca va todo lo relacionado con genero */
     .boxgeneros{
-        background-color: black;
-        color: rgb(235, 120, 12);
-        padding: 60px ;
-        border-radius: 50px;
-        margin: 40px;
-        font-size: 25px;
+        text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    color: rgb(235, 120, 12);
+    padding: 60px;
+    border-radius: 50px;
+    margin: 40px;
+    font-size: 25px;
+    height: 30px;
+    width: 110px;
     }
     .Sectiondelgenero
     {
         margin: 50px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         
      }
      .h1degenero
@@ -327,7 +340,7 @@ ul { display: flex;
      .Articlegenero
     {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         flex-wrap: wrap;
     
