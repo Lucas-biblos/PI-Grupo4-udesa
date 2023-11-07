@@ -129,6 +129,7 @@ ul { display: flex;
     margin-left: 10px;
     height: 735px;
 }
+
 /*Aca va todo lo relacionado con genero */
 .boxgeneros{
     background-color: black;
@@ -158,12 +159,14 @@ ul { display: flex;
     flex-wrap: wrap;
 
  }
+
  /* Reutilizamos lo de favoritos excepto esto*/
 .h1defavoritos{
    color: yellow;
    text-align: center;
    font-size: 40px;
 }
+
 /* A partir de aca hacemos el responsive para el celular*/
 @media(max-width:420px) {
     .Logo {
@@ -298,11 +301,13 @@ ul { display: flex;
         height: 400px;
         width: 384px;
     }
+
     /* series usa el mismo css que peliculas excepto este */
      .imgseries {
         margin: 10px 10px;
         height: 481px;
     }
+
     /*Aca va todo lo relacionado con genero */
     .boxgeneros{
         background-color: black;
@@ -332,13 +337,17 @@ ul { display: flex;
         flex-wrap: wrap;
     
      }
+
      /* Reutilizamos lo de favoritos excepto esto*/
+
     .h1defavoritos{
        color: yellow;
        text-align: center;
        font-size: 40px;
     }
-         /*esto le sumamos a busqueda pero solo version celular para que se vea mejor*/
+
+    /*esto le sumamos a busqueda pero solo version celular para que se vea mejor*/
+
     .busquedacelular  {  
         font-size: 26px;
     }              
