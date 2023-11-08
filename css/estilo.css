@@ -41,8 +41,9 @@ a {
 footer {
     background-color: black;
     color: white;
+    display: flex;
     text-align: center;
-    
+    justify-content: end;
 }
 .fotofooter {
     height: 75px;
@@ -55,7 +56,8 @@ footer {
     margin: 0px 10px;
 }
 .pfooter {
-   font-size: 15px;
+    font-size: 15px;
+    margin-right: 10px;
 }
 .TMDB{
     
@@ -289,7 +291,7 @@ ul { display: flex;
     .imgpeliculas {
         height: 565px;
     }
-      .Sectionpalabraspeliculas {
+    .Sectionpalabraspeliculas {
         margin: 0px 20px;
       }
         
