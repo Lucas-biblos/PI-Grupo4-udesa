@@ -1,4 +1,4 @@
-let apiKey = "e085a8d4a0502afc1d3c8e65c53af130";
+let apiKey = "b7755d0a973ff1c1d329431ff2d89d36";
 
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);

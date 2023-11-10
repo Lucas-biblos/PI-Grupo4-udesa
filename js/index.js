@@ -1,7 +1,7 @@
-let apiKey = "e085a8d4a0502afc1d3c8e65c53af130";
+let apiKey = "b7755d0a973ff1c1d329431ff2d89d36";
 
 let urlTopRatedMovies= `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`;
-let urlPopularMovies= `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+let urlPopularMovies= `https://api.themoviedb.org/3/movie/popular?api_key=${apiKeyy}`;
 let urlTopRatedSeries= `https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}`;
 let urlPopularSeries= `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`;
 
