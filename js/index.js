@@ -1,4 +1,4 @@
-let apiKey = "055556ae06143e409a5fa45eab6c68d1";
+let apiKey = "e085a8d4a0502afc1d3c8e65c53af130";
 
 let urlTopRatedMovies= `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`;
 let urlPopularMovies= `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
@@ -14,7 +14,7 @@ fetch(urlTopRatedMovies)
 
 .then(function(data) {
      console.log(data)
-     
+
 })
 
 .catch(function(errors) {
