@@ -18,13 +18,18 @@ fetch(urlBusqueda)
      let ulBuscar = document.querySelector("#ulBus");
 
      let contenido = "";
-     for (let i = 0; i < mostrar.length; i++) {
-         contenido += `  <li> <a href="./pelicula.html?id=${mostrar[i].id}"><img class="Fotos-seriepopular" src="https://image.tmdb.org/t/p/w342/${mostrar[i].poster_path}" alt=""></a>
+     let i = 0;
+     for (i = 0; i < mostrar.length; i++) {
+            contenido += `  <li> <a href="./pelicula.html?id=${mostrar[i].id}"><img class="Fotos-seriepopular" src="https://image.tmdb.org/t/p/w342/${mostrar[i].poster_path}" alt=""></a>
          <h2 class="h2deindex">${mostrar[i].title}</h2>
          <h3 class="h3deindex">${mostrar[i].release_date}</h3>
          </li> `
         }
-
+     if (i == 0) {
+        contenido = `  <li> 
+        <h2 class="h2deindex">No hay resultado para su búsqueda</h2>
+        </li> `
+     }
     ulBuscar.innerHTML = contenido;
 
 })
