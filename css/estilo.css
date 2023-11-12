@@ -35,6 +35,7 @@ a {
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
+    flex-wrap: wrap;
 
 }
 
