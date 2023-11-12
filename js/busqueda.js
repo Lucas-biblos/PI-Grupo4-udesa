@@ -31,3 +31,6 @@ fetch(urlBusqueda)
 .catch(function(errors) {
     console.log(errors);
 });
+
+let relacionados = document.querySelector(".h1deindex")
+relacionados.innerHTML = `Resultados de búsqueda para: ${resulBusqueda}`;
