@@ -25,7 +25,7 @@ fetch(urlBusqueda)
          <h3 class="h3deindex">${mostrar[i].release_date}</h3>
          </li> `
         }
-     if (i == 0) {
+     if (mostrar.length == 0) {
         contenido = `  <li> 
         <h2 class="h2deindex">No hay resultado para su búsqueda</h2>
         </li> `
