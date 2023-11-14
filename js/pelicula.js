@@ -18,7 +18,7 @@ fetch(url)
 
     console.log(data);
 
-    let imagen = document.querySelector(".imgdepeliculas");
+    let imagen = document.querySelector(".imgpeliculas");
     let titulo = document.querySelector(".h1depeliculas");
     let rating = document.querySelector("#rating");
     let fecha = document.querySelector("#fecha");
@@ -30,7 +30,7 @@ fetch(url)
         imagen.src = "./img/noImage.png"
     }
     else {
-        imagen = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
+        imagen.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
     }
 
     titulo.innerHTML += data.title;
@@ -49,8 +49,7 @@ fetch(url)
 
 
         for (let i = 0; i < midata.genres.length; i++) {
-            genero +=
-                `<p class="h1depeliculas" id="genero"><u>Genero:</u> <a class="celulargenero" href="./detalle-generos.html">${genres[i].name} </a></p>`
+            genero += `<p class="h1depeliculas" id="genero"><u>Genero:</u> <a class="celulargenero" href="./detalle-generos.html">${midata.genres[i].name} </a></p>`
                 
         }
         capturo.innerHTML += genero;
