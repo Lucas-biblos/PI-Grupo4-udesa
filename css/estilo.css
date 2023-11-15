@@ -122,7 +122,8 @@ ul { display: flex;
  }
  .btn{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    color: white;
  }
  .botonpeliculas{
     cursor: pointer;
@@ -175,6 +176,14 @@ ul { display: flex;
    color: yellow;
    text-align: center;
    font-size: 40px;
+}
+.peliculas_recomendacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pelicula {
+    margin: 7px;
 }
 
 /* A partir de aca hacemos el responsive para el celular*/
@@ -300,7 +309,7 @@ ul { display: flex;
      }
      .btn{
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
      }
      .botonpeliculas{
         cursor: pointer;
