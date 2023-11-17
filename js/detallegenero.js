@@ -11,7 +11,7 @@ let cajitaGenero = document.querySelector(".Articlegenero")
 let nombre = JSON.parse(localStorage.getItem("name")) || [];
 
 let Pelisurl =  `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${idgeneropeli}`;
-let Serieurl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${idgeneropeli}`;
+let Serieurl = `https://api.themoviedb.org/3/tv/${idgeneropeli}?api_key=${apiKey}`;
 
 fetch(Pelisurl)
 .then(function(response) {
@@ -28,6 +28,31 @@ return response.json()
     for (let i = 0; i < miData.length; i++){
         contenido += `<li> <a href="./pelicula.html?${miData[i].id}"><img class="Fotos-seriepopular" src="https://image.tmdb.org/t/p/w200${miData[i].poster_path}" alt="${miData[i].title}"></a>
         <h2 class="h2deindex">${miData[i].title}</h2>
+        <h3 class="h3deindex">${miData[i].release_date}</h3>
+        </li>`;
+           
+    }
+        generoPeli.innerHTML = contenido;
+})
+.catch(function(error) {
+console.log("error: " + error);
+})
+
+fetch(Serieurl)
+.then(function(response) {
+return response.json()
+})
+
+.then(function(data) {
+    console.log(data);
+    let miData = data.results;
+    let nombregenero = document.querySelector("#cajitaGeneros"); 
+    nombregenero.innerHTML = titulogenero;
+    let generoPeli = document.querySelector("#generoPeli")
+    let contenido = "";
+    for (let i = 0; i < miData.length; i++){
+        contenido += `<li> <a href="./pelicula.html?${miData[i].id}"><img class="Fotos-seriepopular" src="https://image.tmdb.org/t/p/w200${miData[i].poster_path}" alt="${miData[i].title}"></a>
+        <h2 class="h2deindex">${miData[i].name}</h2>
         <h3 class="h3deindex">${miData[i].release_date}</h3>
         </li>`;
            

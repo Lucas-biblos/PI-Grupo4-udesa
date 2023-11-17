@@ -22,7 +22,7 @@
         </ul>
     </article>
     <article class="formulario">
-        <h4 class="h4buscar">Buscar Películas:</h4>
+        <h4 class="h4buscar" >Buscar Películas:</h4>
         <form action="Busqueda.html" method="get" placeholder="">
             <input type="text" name="buscar">
             <button type="submit">Enviar</button>
@@ -32,27 +32,30 @@
 
    </header>
 
- <main class="maindepeliculas">
-        <section class="Sectionpalabraspeliculas">
-         <img class="imgseries" src="./img/breakingbadserieshtml.webp" alt="breakingbad">
-      </section>
-       <section class="Sectionpalabraspeliculas"> 
-         <h1 class="h1depeliculas"><u>Breaking Bad</u></h1>
-         <p class="h1depeliculas"> <u>Calificacion:</u> ⭐9,5/10</p>
-         <p class="h1depeliculas"><u>Fecha de estreno:</u> 20 de enero de 2008</p>
-         <p class="h1depeliculas"><u>Sinopsis:</u> Un profesor de química con cáncer terminal se asocia con un exalumno suyo para fabricar y vender metanfetamina a fin de que su familia no pase apuros económicos.</p>
-         <p class="h1depeliculas"><u>Genero:</u> <a class="celulargenero" href="./detalle-generos.html">Drama </a> </p>
-         <p class="h1depeliculas"><u>Trailer:</u></p>
-         <iframe class="iframecelular" width="860" height="430" src="https://www.youtube.com/embed/HhesaQXLuRY?si=F2FzZWkdhwtUd5sG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    
-         <article class="btn">
-            <button class="botonpeliculas"> ⭐Favoritos</button>
-    
-         </article>
-    </section> 
- </main>
+   <main class="maindepeliculas" id="main">
+    <section class="Sectionimgpeliculas">
+    <img class="imgpeliculas" src=" " alt="infinitywar">
+</section>
+   <section class="Sectionpalabraspeliculas" > 
+    <h1 class="h1depeliculas"><u> </u></h1>
+    <p class="h1depeliculas" id="rating"> <u>Calificacion:</u> ⭐</p>
+    <p class="h1depeliculas" id="fecha"><u>Fecha de estreno:</u> </p>
+    <p class="h1depeliculas" id="sinopsis"><u>Sinopsis:</u> </p>
+    <p class="h1depeliculas" id="genero"><u> </u> <a class="celulargenero" href="./detalle-generos.html"> </a>  <a class="celulargenero" href="./detalle-generos.html"></a></p>
+    <p class="h1depeliculas"><u>Trailer:</u></p>
+    <iframe class="iframecelular" id="trailer" width="860" height="430" src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=Zdw4qD3hCYP0oEoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
 
- <footer>
+    <article class="btn" id="btrecom">
+        <button id="recomendaciones" class="botonpeliculas"> ⭐Recomendaciones</button>
+    </article>
+    <div id="divrecom">
+        <div class="pelisrecom">                    
+        </div>
+    </div>
+</section>
+   </main>
+
+   <footer>
     <section>
         <div class="divfooter"> 
             <p class="pfooter"> Hecho por: Matias Inda, Lucas Biblos y Gregorio Bonardi</p>
@@ -61,6 +64,6 @@
         </div>
     </section>
    </footer>
-   <script src="./JS/series.js"></script>
+   <script src="./js/series.js"></script>
 </body>
 </html>

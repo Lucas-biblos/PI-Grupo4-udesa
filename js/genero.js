@@ -35,16 +35,30 @@ fetch(urlgeneropeli)
   console.log("Error: " + error);
 })
 
-function genero() {
-    let caja = document.querySelector(".boxgenerosseries");
-    for (let i = 0; i < caja.length; i++) {
-        caja[i].addEventListener("click", function() {
-          let nombre = caja[i].id;
-          localStorage.setItem("name", JSON.stringify(nombre));
-        });
-      }
-}
 
+
+
+fetch(urlgeneroserie)
+
+.then(function(response) {
+  return response.json()
+})
+
+.then(function(data) {
+    let genero = data.genres
+    console.log(data);
+    let cajas = '';
+    let articlepeli = document.querySelector("#cajageneros")
+   
+    for(let i=0; i < genero.length; i++){
+        cajas += `<a class= "boxgeneros" href="./detalle-generos.html?id=${genero[i].id}&name=${genero[i].name}">${genero[i].name}</a>`
+    }
+    articlepeli.innerHTML = cajas
+    
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+})
 
 
 
