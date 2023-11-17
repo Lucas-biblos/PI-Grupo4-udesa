@@ -177,7 +177,7 @@ ul { display: flex;
    text-align: center;
    font-size: 40px;
 }
-.peliculas_recomendacion{
+.pelis_recomendadas {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -7,7 +7,7 @@ let idpelicula = qsobj.get("id")
 
 
 let url = `https://api.themoviedb.org/3/movie/${idpelicula}?api_key=${apiKey}`
-let botonRecomend = `https://api.themoviedb.org/3/movie/${idpelicula}/recommendations?api_key=${apiKey}`
+let botonRecomendado = `https://api.themoviedb.org/3/movie/${idpelicula}/recommendations?api_key=${apiKey}`
 
 let peliculas_recomendacion = document.querySelector("#recomendaciones")
 let btrecom = document.querySelector("#btnrecom")
@@ -79,7 +79,7 @@ fetch(botonRecomend)
 .then(function(data){
     console.log(data);
     let results = data.results;
-    let div_peli_recom = document.querySelector(".peliculas_recomendacion")
+    let div_peli_recom = document.querySelector(".pelis_recomendadas")
     let peliss = ""
     if (results.length != 0) {
         for (let i = 0; i < 4; i++) {
@@ -116,8 +116,8 @@ fetch(botonRecomend)
             }
     }
     else {
-        let div_peli_recom = document.querySelector(".peliculas_recomendacion");
-        peliss += `<p>No hay recomendaciones disponibles para este titulo.</p>`
+        let div_peli_recom = document.querySelector(".pelis_recomendadas");
+        peliss += `<p>Esta pelicula no cuenta con recomendaciones adicionales.</p>`
     }
     div_peli_recom.innerHTML = peliss
    
