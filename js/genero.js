@@ -48,7 +48,7 @@ fetch(urlgeneroserie)
     let genero = data.genres
     console.log(data);
     let cajas = '';
-    let articlepeli = document.querySelector("#cajageneros")
+    let articlepeli = document.querySelector("#cajasdegeneros")
    
     for(let i=0; i < genero.length; i++){
         cajas += `<a class= "boxgeneros" href="./detalle-generos.html?id=${genero[i].id}&name=${genero[i].name}">${genero[i].name}</a>`
@@ -75,7 +75,7 @@ fetch(urlgeneroserie)
     let articleserie = document.querySelector("#cajageneros2")
    
     for(let i=0; i < genero2.length; i++){
-        cajas2 += `<a class= "boxgeneros" href="./detalle-generos.htmlid=${genero2[i].id}"">${genero2[i].name}</a>`
+        cajas2 += `<a class= "boxgeneros" href="./detalle-generos.html?id=${genero2[i].id}"">${genero2[i].name}</a>`
     }
     articleserie.innerHTML = cajas2
     

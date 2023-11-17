@@ -5,9 +5,9 @@ let qsobj = new URLSearchParams(qs);
 let idpelicula = qsobj.get("id")
 
 
-
 let url = `https://api.themoviedb.org/3/movie/${idpelicula}?api_key=${apiKey}`
 let botonRecomendado = `https://api.themoviedb.org/3/movie/${idpelicula}/recommendations?api_key=${apiKey}`
+let urlyoutube = `https://www.youtube.com/${idpelicula}?api_key=${apiKey}`
 
 let pelirecom = document.querySelector("#divrecom")
 let btrecom = document.querySelector("#recomendaciones")
@@ -38,7 +38,6 @@ fetch(url)
     let fecha = document.querySelector("#fecha");
     let duracion = document.querySelector("#duracion");
     let sinopsis = document.querySelector("#sinopsis");
-    let trailer = document.querySelector("#trailer");
     
     if (data.poster_path == null) {
         imagen.src = "./img/Noimage.png"
@@ -68,6 +67,8 @@ fetch(url)
         }
         capturo.innerHTML += genero;   
         })
+    
+
 
 .catch(function(errors) {
     console.log(errors);
@@ -97,11 +98,11 @@ fetch(botonRecomendado)
             peliss += `
                 <div class ="portada">
                     <div class="pelicula">
-                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
-                        <div class="titfav">
-                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
+                        <a href="./pelicula.html?id=${results[i].id}" ><img   src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
+                        <div >
+                        <a href="./pelicula.html?id=${results[i].id}" ><h4 id="${results[i].id}" >${results[i].title}</h4></a>
                         </div>
-                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
+                        <a href="./pelicula.html?id=${results[i].id}" ><p >${results[i].release_date}</p></a>
                     </div>    
                 </div>
                 `;}
@@ -109,11 +110,11 @@ fetch(botonRecomendado)
                 peliss += `
                     <div class ="portada">
                         <div class="pelicula">
-                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="./img/LOGO/Image_not_available.png" alt="${results[i].title}"></a>
-                            <div class="titfav">
-                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
+                            <a href="./pelicula.html?id=${results[i].id}" ><img src="./img/LOGO/Image_not_available.png" alt="${results[i].title}"></a>
+                            <div >
+                            <a href="./pelicula.html?id=${results[i].id}" ><h4 id="${results[i].id}" >${results[i].title}</h4></a>
                             </div>
-                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
+                            <a href="./pelicula.html?id=${results[i].id}" ><p>${results[i].release_date}</p></a>
                         </div>    
                     </div>
                     `
@@ -131,3 +132,29 @@ fetch(botonRecomendado)
     console.log(error);
 })
 
+
+
+
+fetch(urlyoutube)
+
+.then(function(response) {
+    return response.json();
+})
+
+.then(function(data) {
+
+    console.log(data);
+
+    let trailer = document.querySelector("#linkyt");
+    
+    let midata = data;
+
+    trailer.innerHTML += `https://www.youtube.com/${idpelicula}?api_key=${apiKey}`
+  
+        })
+    
+
+
+.catch(function(errors) {
+    console.log(errors);
+});

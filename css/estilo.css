@@ -98,6 +98,7 @@ ul { display: flex;
     margin: 0px 10px;
 }
 
+
 /* aca empieza detalles peliculas */
 
 .maindepeliculas {
@@ -129,6 +130,10 @@ ul { display: flex;
  .botonpeliculas{
     cursor: pointer;
   }
+
+h4{
+    width: 200px;
+}
 
 /* series usa el mismo css que peliculas excepto este */
  .imgseries {

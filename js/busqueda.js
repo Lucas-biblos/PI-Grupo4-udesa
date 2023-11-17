@@ -23,7 +23,7 @@ fetch(url_search)
      let i = 0;
      for (i = 0; i < mostrar.length; i++) {
             contenido += `  <li> <a href="./pelicula.html?id=${mostrar[i].id}"><img class="Fotos-seriepopular" src="https://image.tmdb.org/t/p/w342/${mostrar[i].poster_path}" alt=""></a>
-         <h2 class="h2deindex">${mostrar[i].title}</h2>
+         <h2 class="h2deindex" id="h222">${mostrar[i].title}</h2>
          <h3 class="h3deindex">${mostrar[i].release_date}</h3>
          </li> `
         }
