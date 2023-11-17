@@ -9,8 +9,17 @@ let idpelicula = qsobj.get("id")
 let url = `https://api.themoviedb.org/3/movie/${idpelicula}?api_key=${apiKey}`
 let botonRecomendado = `https://api.themoviedb.org/3/movie/${idpelicula}/recommendations?api_key=${apiKey}`
 
-let peliculas_recomendacion = document.querySelector("#recomendaciones")
-let btrecom = document.querySelector("#btnrecom")
+let pelirecom = document.querySelector("#divrecom")
+let btrecom = document.querySelector("#recomendaciones")
+
+btrecom.addEventListener ("click", function() {
+    if(pelirecom.style.display == "none"){
+        pelirecom.style.display = 'flex';
+    }  
+    else{
+        pelirecom.style.display = "none";
+    }
+})
 
 
 fetch(url)
@@ -70,7 +79,7 @@ fetch(url)
 
 
 
-fetch(botonRecomend)
+fetch(botonRecomendado)
 
 .then(function(response) {
     return response.json();
@@ -79,24 +88,20 @@ fetch(botonRecomend)
 .then(function(data){
     console.log(data);
     let results = data.results;
-    let div_peli_recom = document.querySelector(".pelis_recomendadas")
+    let div_peli_recom = document.querySelector(".pelisrecom")
     let peliss = ""
     if (results.length != 0) {
         for (let i = 0; i < 4; i++) {
-            let movie_id = results[i].id;
-            let movie_title = results[i].title;
-            let fecha = results[i].release_date;
             let posterPath = results[i].poster_path
-            let poster = "https://image.tmdb.org/t/p/w200" + posterPath
             if (posterPath != null){
             peliss += `
                 <div class ="portada">
                     <div class="pelicula">
-                        <a href="./detail-movie.html?movie_id=${movie_id}" class="addPic"><img id="fotopeli" class="fotos" src=${poster} alt="${movie_title}"></a>
+                        <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
                         <div class="titfav">
-                        <a href="./detail-movie.html?movie_id=${movie_id}" class="addPic"><h4 id="${movie_id}" class="capturarId">${movie_title}</h4></a>
+                        <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
                         </div>
-                        <a href="./detail-movie.html?movie_id=${movie_id}" class="addPic"><p class="addDate">${fecha}</p></a>
+                        <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
                     </div>    
                 </div>
                 `;}
@@ -104,11 +109,11 @@ fetch(botonRecomend)
                 peliss += `
                     <div class ="portada">
                         <div class="pelicula">
-                            <a href="./detail-movie.html?movie_id=${movie_id}" class="addPic"><img id="fotopeli" class="fotos" src="./img/LOGO/Image_not_available.png" alt="${movie_title}"></a>
+                            <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="./img/LOGO/Image_not_available.png" alt="${results[i].title}"></a>
                             <div class="titfav">
-                            <a href="./detail-movie.html?movie_id=${movie_id}" class="addPic"><h4 id="${movie_id}" class="capturarId">${movie_title}</h4></a>
+                            <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
                             </div>
-                            <a href="./detail-movie.html?movie_id=${movie_id}" class="addPic"><p class="addDate">${fecha}</p></a>
+                            <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
                         </div>    
                     </div>
                     `

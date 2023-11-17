@@ -177,13 +177,21 @@ ul { display: flex;
    text-align: center;
    font-size: 40px;
 }
-.pelis_recomendadas {
+.pelisrecom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 .pelicula {
     margin: 7px;
+}
+
+.capturarId{
+    width: 200px;
+}
+
+.portada{
+    
 }
 
 /* A partir de aca hacemos el responsive para el celular*/
