@@ -88,7 +88,7 @@ fetch(botonRecomendado)
 .then(function(data){
     console.log(data);
     let results = data.results;
-    let div_peli_recom = document.querySelector(".pelisrecom")
+    let recomdiv = document.querySelector(".pelisrecom")
     let peliss = ""
     if (results.length != 0) {
         for (let i = 0; i < 4; i++) {
@@ -97,11 +97,11 @@ fetch(botonRecomendado)
             peliss += `
                 <div class ="portada">
                     <div class="pelicula">
-                        <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
+                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
                         <div class="titfav">
-                        <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
+                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
                         </div>
-                        <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
+                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
                     </div>    
                 </div>
                 `;}
@@ -109,11 +109,11 @@ fetch(botonRecomendado)
                 peliss += `
                     <div class ="portada">
                         <div class="pelicula">
-                            <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="./img/LOGO/Image_not_available.png" alt="${results[i].title}"></a>
+                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="./img/LOGO/Image_not_available.png" alt="${results[i].title}"></a>
                             <div class="titfav">
-                            <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
+                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
                             </div>
-                            <a href="./detail-movie.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
+                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
                         </div>    
                     </div>
                     `
@@ -121,10 +121,10 @@ fetch(botonRecomendado)
             }
     }
     else {
-        let div_peli_recom = document.querySelector(".pelis_recomendadas");
+        let recomdiv = document.querySelector(".pelis_recomendadas");
         peliss += `<p>Esta pelicula no cuenta con recomendaciones adicionales.</p>`
     }
-    div_peli_recom.innerHTML = peliss
+    recomdiv.innerHTML = peliss
    
 })
     .catch(function(error){

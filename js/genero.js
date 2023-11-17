@@ -26,7 +26,7 @@ fetch(urlgeneropeli)
     let articlepeli = document.querySelector("#cajasdegeneros")
    
     for(let i=0; i < genero.length; i++){
-        cajas += `<a class= "boxgeneros" href="./detalle-generos.htmlid=${genero[i].id}"">${genero[i].name}</a>`
+        cajas += `<a class= "boxgeneros" href="./detalle-generos.html?id=${genero[i].id}&name=${genero[i].name}">${genero[i].name}</a>`
     }
     articlepeli.innerHTML = cajas
     
