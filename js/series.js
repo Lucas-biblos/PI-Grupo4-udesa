@@ -10,6 +10,10 @@ console.log(idseries);
 let url = `https://api.themoviedb.org/3/tv/${idseries}?api_key=${apiKey}`
 let botonRecomendado = `https://api.themoviedb.org/3/tv/${idseries}/recommendations?api_key=${apiKey}`
 
+let urltrailer = `https://api.themoviedb.org/3/movie/${idseries}/videos?api_key=${apiKey}`
+let sectiontrailer = document.querySelector('#yttrailer')
+
+
 let pelirecom = document.querySelector("#divrecom")
 let btrecom = document.querySelector("#recomendaciones")
 
@@ -96,11 +100,11 @@ fetch(botonRecomendado)
             peliss += `
                 <div class ="portada">
                     <div class="pelicula">
-                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
+                        <a href="./series.html?id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
                         <div class="titfav">
-                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
+                        <a href="./series.html?id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].name}</h4></a>
                         </div>
-                        <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
+                        <a href="./series.html?id=${results[i].id}" class="addPic"><p class="addDate">${results[i].first_air_date}</p></a>
                     </div>    
                 </div>
                 `;}
@@ -108,11 +112,11 @@ fetch(botonRecomendado)
                 peliss += `
                     <div class ="portada">
                         <div class="pelicula">
-                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="./img/LOGO/Image_not_available.png" alt="${results[i].title}"></a>
+                            <a href="./series.html?id=${results[i].id}" class="addPic"><img id="fotopeli" class="fotos" src="./img/NoImage.png" alt="${results[i].title}"></a>
                             <div class="titfav">
-                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
+                            <a href="./series.html?id=${results[i].id}" class="addPic"><h4 id="${results[i].id}" class="capturarId">${results[i].title}</h4></a>
                             </div>
-                            <a href="./pelicula.html?movie_id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
+                            <a href="./series.html?id=${results[i].id}" class="addPic"><p class="addDate">${results[i].release_date}</p></a>
                         </div>    
                     </div>
                     `
@@ -130,3 +134,34 @@ fetch(botonRecomendado)
     console.log(error);
 })
 
+fetch(urltrailer)
+
+.then(function(response) {
+    return response.json();
+})
+
+.then(function(data) {
+
+    console.log(data);
+
+    let midata = data.results;
+        let videoyt = "";
+        for (let i = 0; i < midata.length; i++) {
+            
+        videoyt = `<a href="https://www.youtube.com/watch?v=${midata[i].key}" id="yttrailer" target="_blank" >https://www.youtube.com/watch?v=${midata[i].key}</a>`
+        }
+        
+            
+       
+            
+        sectiontrailer.innerHTML = videoyt;
+            
+            } )
+
+
+    .catch(function (error) {
+
+        console.log(error);
+
+
+    })

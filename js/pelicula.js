@@ -7,7 +7,9 @@ let idpelicula = qsobj.get("id")
 
 let url = `https://api.themoviedb.org/3/movie/${idpelicula}?api_key=${apiKey}`
 let botonRecomendado = `https://api.themoviedb.org/3/movie/${idpelicula}/recommendations?api_key=${apiKey}`
-let urlyoutube = `https://www.youtube.com/${idpelicula}?api_key=${apiKey}`
+
+let urltrailer = `https://api.themoviedb.org/3/movie/${idpelicula}/videos?api_key=${apiKey}`
+let sectiontrailer = document.querySelector('#yttrailer')
 
 let pelirecom = document.querySelector("#divrecom")
 let btrecom = document.querySelector("#recomendaciones")
@@ -98,7 +100,7 @@ fetch(botonRecomendado)
             peliss += `
                 <div class ="portada">
                     <div class="pelicula">
-                        <a href="./pelicula.html?id=${results[i].id}" ><img   src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
+                        <a href="./pelicula.html?id=${results[i].id}" ><img  src="https://image.tmdb.org/t/p/w200${results[i].poster_path}" alt="${results[i].title}"></a>
                         <div >
                         <a href="./pelicula.html?id=${results[i].id}" ><h4 id="${results[i].id}" >${results[i].title}</h4></a>
                         </div>
@@ -110,7 +112,7 @@ fetch(botonRecomendado)
                 peliss += `
                     <div class ="portada">
                         <div class="pelicula">
-                            <a href="./pelicula.html?id=${results[i].id}" ><img src="./img/LOGO/Image_not_available.png" alt="${results[i].title}"></a>
+                            <a href="./pelicula.html?id=${results[i].id}" ><img src="./img/NoImage.png" alt="${results[i].title}"></a>
                             <div >
                             <a href="./pelicula.html?id=${results[i].id}" ><h4 id="${results[i].id}" >${results[i].title}</h4></a>
                             </div>
@@ -135,7 +137,7 @@ fetch(botonRecomendado)
 
 
 
-fetch(urlyoutube)
+fetch(urltrailer)
 
 .then(function(response) {
     return response.json();
@@ -145,16 +147,24 @@ fetch(urlyoutube)
 
     console.log(data);
 
-    let trailer = document.querySelector("#linkyt");
-    
-    let midata = data;
+    let midata = data.results;
+        let videoyt = "";
+        for (let i = 0; i < midata.length; i++) {
+            
+        videoyt = `<a href="https://www.youtube.com/watch?v=${midata[i].key}" id="yttrailer" target="_blank">https://www.youtube.com/watch?v=${midata[i].key}</a>`
+        }
+        
+            
+       
+            
+        sectiontrailer.innerHTML = videoyt;
+            
+            } )
 
-    trailer.innerHTML += `https://www.youtube.com/${idpelicula}?api_key=${apiKey}`
-  
-        })
-    
+
+    .catch(function (error) {
+
+        console.log(error);
 
 
-.catch(function(errors) {
-    console.log(errors);
-});
+    })
